@@ -3,7 +3,7 @@ let message = prompt("Que veux-tu dire à notre Acné-bot?");
 let acneBotResponse = function (string) {
   if (string.slice(-1) === "?") {
     return "Ouais Ouais...";
-  } else if (string === string.toUpperCase()) {
+  } else if (string != "" && string === string.toUpperCase()) {
     return "Pwa, calme-toi...";
   } else if (string.includes("fortnite")) {
     return "on s' fait une partie soum-soum ?";

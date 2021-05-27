@@ -1,12 +1,13 @@
 const arn1 = "CCGUCGUUGCGCUACAGC";
 const arn2 = "CCUCGCCGGUACUUCUCG";
-protein = "";
 
 let codonToProtein = function (arn) {
   for (let i = 0; i < arn.length; i = i + 3) {
-    let codon = arn.substr(i, 3);
-
-    switch (codon) {
+    aa = arn.substring(i, 3);
+    // let codon = arn.match(/.{1,3}/g);
+    // protein = "";
+    // for (let i = 0; i < arn.length - 1; i++) {
+    switch (aa) {
       case "UCU":
       case "UCC":
       case "UCA":
@@ -47,7 +48,7 @@ let codonToProtein = function (arn) {
         break;
     }
   }
-  return protein.join("-");
+  return aa.join("-");
 };
 
 console.log(codonToProtein(arn1));
