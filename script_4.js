@@ -45,3 +45,14 @@ let calcAge = entrepreneurs.map((item) => {
 console.log(calcAge);
 
 //Entrepreneurs by family names
+let sortedByFamilyNames = entrepreneurs.sort((a, b) => {
+  if (a.last < b.last) {
+    return -1;
+  }
+  if (a.last > b.last) {
+    return 1;
+  }
+  return 0;
+});
+
+console.log(sortedByFamilyNames);
