@@ -36,13 +36,13 @@ let bookWithSpecificId = books.filter(function (item) {
 console.log(bookWithSpecificId);
 
 //Delete book with ID of 133712
-let ArrayWithOneBookDeleted = books.filter(function (item) {
+let arrayWithOneBookDeleted = books.filter(function (item) {
   return item.id != 133712;
 });
-console.log(ArrayWithOneBookDeleted);
+console.log(arrayWithOneBookDeleted);
 
 //Sort books by alphabetical order(133712 not included)
-let booksSorted = ArrayWithOneBookDeleted.sort((a, b) =>
+let booksSorted = arrayWithOneBookDeleted.sort((a, b) =>
   a.title < b.title ? -1 : 1
 );
 console.log(booksSorted);
